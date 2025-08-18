@@ -9,12 +9,12 @@
         font-weight: normal;
         color: rgb(50, 50, 50);
         text-align: center;
-        }
-        #banner {
-          width: 100%;
-          height: 360px;
-          object-fit: cover;
-        }  
+      }
+      #banner {
+        width: 100%;
+        height: 360px;
+        object-fit: cover;
+      }  
       h2 {
         font-family: roboto;
         font-size: 32px;
@@ -25,7 +25,6 @@
       p {
         font-family: roboto;
         color: rgb(80, 80, 80);
-        
       }
       #container {
         max-width: 720px;
@@ -34,21 +33,63 @@
       .center {
         text-align: center;
       }
+      .job {
+        margin-bottom: 20px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .job h4 {
+        color: rgb(120, 120, 120);
+        margin-bottom: 4px;
+      }
+      .job-button {
+        margin-top: 10px;
+        text-align: right;
+      }
+      .job-button button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+      .job-button button:hover {
+        background-color: #45a049;
+      }
     </style>
   </head>
   <body> 
-   <div id="container">
-  <h1>Henry Careers</h1>
-    <img id = "banner" src = "https://41f78be7-c5d2-42a8-becd-607b4fa0c0d0-00-2bp3qz2nn5l2g.kirk.replit.dev/static/banner.jpg"> 
-    <h2>About Henry</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h2>open positions</h2>
-    <p>Todo - show the jobs here</p>
-    <div class="center">
-    <button>Contact us</button>
+    <div id="container">
+      <h1>Henry Careers</h1>
+      <img id="banner" src="https://41f78be7-c5d2-42a8-becd-607b4fa0c0d0-00-2bp3qz2nn5l2g.kirk.replit.dev/static/banner.jpg"> 
+
+      <h2>About Henry</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+
+      <h2>Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          <div class="job">
+            <h4>{{ job.title }}</h4>
+            <div><b>Location:</b> {{ job.location }}</div>
+
+            {% if 'salary' in job %}
+              <div><b>Salary:</b> {{ job.salary }}</div>
+              <div class="job-button">
+                <button>Apply</button>
+              </div>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      <div class="center">
+        <button>Contact us</button>
+      </div>
     </div>
-   </div>
   </body>
 </html>
