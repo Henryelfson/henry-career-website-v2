@@ -1,8 +1,13 @@
 <div class="job">
-   <h4>{{job.title}}</h4>
-   <div><b>Location:</b> {{job.location}}
-   </div>
-   {% if 'salary' in job %}
-   <div> 
-     <b>Salary:</b> {{job.salary}}
-   </div>
+  <h4>
+    <a href="/job/{{job.id}}">{{ job.title }}</a>
+  </h4>
+  <div>
+    <b>Location:</b> {{ job.location }}
+  </div>
+  {% if 'salary' in job %}
+  <div>
+    <b>Salary:</b> {{ job.salary }}
+  </div>
+  {% endif %}
+</div>

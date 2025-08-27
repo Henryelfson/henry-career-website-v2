@@ -1,0 +1,54 @@
+<!-- Banner Section -->
+<div id="banner">
+  <img src="/static/banner.jpg" alt="Banner Image" class="img-fluid">
+</div>
+
+<!-- Text Section -->
+<div class="banner-text">
+  <h1>Henry Careers</h1>
+  <p>Find your dream job with us</p>
+</div>
+
+<style>
+  /* Banner styling */
+  #banner {
+    width: 100%;
+    max-height: 360px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  #banner img {
+    width: 100%;
+    height: auto; /* keeps image ratio */
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Text section */
+  .banner-text {
+    text-align: center;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .banner-text h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .banner-text p {
+    font-size: 18px;
+    color: #555;
+  }
+
+  /* Mobile responsive */
+  @media (max-width: 768px) {
+    .banner-text h1 {
+      font-size: 24px;
+    }
+    .banner-text p {
+      font-size: 16px;
+    }
+  }
+</style>
