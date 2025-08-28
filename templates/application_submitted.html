@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Application Submitted</title>
+   {% include 'bootstrap.html' %}
+
+   <div class="container">
+     <h1 class="text-center my-4">
+       Henry Careers
+     </h1>
+
+     <p>Your application for the role of "{{job['title']}}" at Henry Careers has been submitted.</p>
+ </head> 
+  <body>
+    {% include 'nav.html' %}
+    {% include 'banner.html' %}
+
+    <b>Full Name</b>
+    <div class="mb-2">{{application['full_name']}}</div>
+
+    <b>Email</b>
+    <div class="mb-2>{{application['Email']}}</div>
+
+    <b>Linked In</b>
+    <div class="mb-2>{{application['linkedin_url']}}</div>
+
+    <b>Work Experience</b>
+    <div class="mb-2>{{application['work_experience']}}</div>
+
+    <b>resume url</b>
+    <div class="mb-2>{{application['resume_url']}}</div>
+
+    <b>Education</b>
+    <div class="mb-2>{{application['Education']}}</div>
+  </div>
+    {% include 'footer.html' %}
+  </body>
+</html>
